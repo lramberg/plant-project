@@ -1,20 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-var plantSchema = new Schema({
-    userId: String,
-    name: String,
-    type: String,
-    waterIntake: String,
-    sunIntake: String
-}, {
-    timestamps: true
-});
-
 var userSchema = new Schema({
     name: String,
     password: String,
-    plants: [plantSchema]
+    plants: [{type: Schema.Types.ObjectId, ref: 'Plant'}]
 }, {
     timestamps: true
 });
