@@ -7,6 +7,7 @@ const SALT_ROUNDS = 6;
 const userSchema = new Schema({
     name: String,
     password: String,
+    email: String,
     plants: [{type: Schema.Types.ObjectId, ref: 'Plant'}]
 }, {
     timestamps: true
