@@ -2,14 +2,11 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cors = require('cors');
 
 require('dotenv').config();
 require('./config/database');
-
-var apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -20,7 +17,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.use('/api', apiRouter);
+app.use('/api/plants', require('./routes/api/plants'));
+app.use('/api/users', require('./routes/api/users'));
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
