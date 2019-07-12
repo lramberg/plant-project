@@ -3,10 +3,16 @@ const router = express.Router();
 const plantsCtrl = require('../../controllers/plants');
 
 /* GET /api/posts */
-router.get('/plants', plantsCtrl.getAllPlants);
-router.get('/plants/:id', plantsCtrl.getOnePlant);
-router.post('/plants', plantsCtrl.createPlant);
-router.delete('/plants/:id', plantsCtrl.deletePlant);
-router.put('/plants/:id', plantsCtrl.updatePlant);
+router.get('/', plantsCtrl.getAllPlants);
+router.get('/:id', plantsCtrl.getOnePlant);
+router.use(require('../../config/auth'));
+router.post('/', plantsCtrl.createPlant);
+router.delete('/:id', plantsCtrl.deletePlant);
+router.put('/:id', plantsCtrl.updatePlant);
+
+function checkAuth(req, res, next) {
+    if(req.user) return next();
+    return res.status(401).json({msg: 'Not Authorized'});
+}
 
 module.exports = router;

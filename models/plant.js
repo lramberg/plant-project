@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var plantSchema = new Schema({
-    userId: String,
+    userId: {type: Schema.Types.ObjectId, ref: 'User'},
     name: String,
     type: String,
     waterIntake: String,

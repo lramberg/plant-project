@@ -1,4 +1,5 @@
 const Plant = require('../models/plant');
+const User = require('../models/user');
 
 module.exports = {
     getAllPlants,
@@ -27,14 +28,34 @@ function getOnePlant(req, res) {
 }
 
 function createPlant(req, res) {
-    Plant.create(req.body).then(function(plant) {
-        res.status(201).json(plant);
-    });
+   User.findById(req.user._id).exec(function(err, user) {
+       console.log(user);
+       Plant.create(req.body, function(err, plant) {
+           plant.userId = user._id;
+           user.plants.push(plant._id);
+           plant.save();
+           console.log(plant);
+           user.save();
+           res.status(200).json(plant);
+        })
+   })
 }
 
 function getAllPlants(req, res) {
-    Plant.find({}).then(function(plants) {
-        console.log(plants);
-        res.status(200).json(plants);
-    });
+    // User.findById(req.user._id).then(function(err, user){
+    //     console.log(user)
+        Plant.find().then(function(plants) {
+            console.log(plants);
+            res.status(200).json(plants);
+        });
+    // })
 }
+
+// function getAllPlants(req, res) {
+//     User.findById(req.user._id).exec(function(err, user) {
+//         Plant.find({'userId': user._id }).then(function(plants) {
+//             console.log(plants);
+//             res.status(200).json(plants);
+//         });
+//     });
+// }

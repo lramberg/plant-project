@@ -6,6 +6,8 @@ import SignupPage from './pages/SignupPage/SignupPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import userService from './services/userService';
 import HomePage from './pages/HomePage/HomePage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import Create from '../src/components/Create/Create';
 
 
 class App extends Component {
@@ -29,10 +31,18 @@ class App extends Component {
         return (
             <div className="App">
             <Switch>
+                <Route exact path='/create' render={() => 
+                    <Create user={this.state.user}/>
+                } />
                 <Route exact path='/buddy' render={() => 
                     <PlantPage 
                         user={this.state.user}
                         handleLogout={this.handleLogout}
+                    />
+                } />
+                <Route exact path='/profile' render={() => 
+                    <ProfilePage 
+                        user={this.state.user}
                     />
                 } />
                 <Route exact path='/signup' render={({ history }) => 
