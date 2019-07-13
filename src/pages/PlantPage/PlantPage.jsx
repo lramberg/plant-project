@@ -4,7 +4,6 @@ import PlantDisplay from '../../components/PlantDisplay/PlantDisplay';
 import Actions from '../../components/Actions/Actions';
 import CareInstructions from '../../components/CareInstructions/CareInstructions';
 import Meters from '../../components/Meters/Meters';
-import Seedling from '../../components/Seedling/Seedling';
 import Sunlight from '../../components/Sunlight/Sunlight';
 import { getPlant } from '../../services/plantService';
 
@@ -38,7 +37,6 @@ class PlantPage extends Component {
                 <CareInstructions />
                 <Meters />
                 <PlantDisplay />
-                <Seedling />
                 <Sunlight />
             </div>
         );
