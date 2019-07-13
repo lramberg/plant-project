@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { createPlant } from '../../services/plantService';
 
 class Create extends Component {
@@ -16,7 +17,7 @@ class Create extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         createPlant(this.state).then(function(json) {
-            window.location = '/profile';
+            window.location = `/buddy/{plant._id}`;
         });
     }
      
@@ -29,6 +30,7 @@ class Create extends Component {
                     <input onChange={ this.handleName } value={ this.state.name } />
                     <input type="submit" value="Submit" />
                 </form>
+                <Link to='/profile'>Cancel</Link>
             </div>
         );
     }

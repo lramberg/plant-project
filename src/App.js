@@ -34,8 +34,9 @@ class App extends Component {
                 <Route exact path='/create' render={() => 
                     <Create user={this.state.user}/>
                 } />
-                <Route exact path='/buddy' render={() => 
-                    <PlantPage 
+                <Route exact path='/buddy/:id' render={(props) => 
+                    <PlantPage
+                        {...props}
                         user={this.state.user}
                         handleLogout={this.handleLogout}
                     />

@@ -13,10 +13,15 @@ const ProfilePage = (props) => {
                 handleLogout={props.handleLogout}
             />
             <h1>Profile of {props.user.name}</h1>
-            <Index user={props.user}/>
             <Link to='/create' className="nav-link">Create</Link>
-
-
+            <Switch>
+                <Route exact path='/profile' render={() =>
+                    <Index user={props.user}/>
+                } />
+                <Route exact path='/create' render={() => 
+                    <Create />
+                } />
+            </Switch>
         </div>
     );
 };
