@@ -22,7 +22,7 @@ class Index extends Component {
             {if(plant.userId == this.props.user._id){
                 return (
                     <li key={idx}>
-                        <Link to={`/buddy/${plant._id}`}>{plant.name}</Link>
+                        <Link to={`/buddy/${plant._id}`} className="btn btn-primary">{plant.name}</Link>
                     </li>
                 )
             }}

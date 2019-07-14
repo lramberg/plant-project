@@ -8,6 +8,7 @@ import userService from './services/userService';
 import HomePage from './pages/HomePage/HomePage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import Create from '../src/components/Create/Create';
+import Edit from '../src/components/Edit/Edit';
 
 
 class App extends Component {
@@ -31,6 +32,9 @@ class App extends Component {
         return (
             <div className="App">
             <Switch>
+                <Route exact path='/buddy/:id/edit' render={ (props) => 
+                    <Edit {...props} />
+                } />    
                 <Route exact path='/create' render={() => 
                     <Create user={this.state.user}/>
                 } />

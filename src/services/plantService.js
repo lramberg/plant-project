@@ -33,8 +33,7 @@ export function editPlant(plant) {
     return fetch(`/api/plants/${plant.id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            title: plant.title,
-            body: plant.body
+            name: plant.name,
         }),
         headers: {
             'content-type': 'application/json'

@@ -17,7 +17,7 @@ class Create extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         createPlant(this.state).then(function(json) {
-            window.location = `/buddy/{plant._id}`;
+            window.location = `/profile`;
         });
     }
      

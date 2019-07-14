@@ -5,7 +5,8 @@ var plantSchema = new Schema({
     userId: {type: Schema.Types.ObjectId, ref: 'User'},
     name: String,
     watering: Array,
-    brightness: Array
+    brightness: Array,
+    growth: { type: Number, default: 0 }
 }, {
     timestamps: true
 });
