@@ -12,8 +12,6 @@ class PlantPage extends Component {
         this.state = {
             id: '',
             name: '',
-            watering: [],
-            brightness: [],
             waterSum: '',
             plantGrowth: ''
         }
@@ -27,19 +25,6 @@ class PlantPage extends Component {
             console.log(plant);
             self.setState({ id: id, name: plant.name, waterSum: plant.waterSum, plantGrowth: plant.growth });
         });
-    }
-
-    determinePlantGrowth() {
-        var sum = this.state.waterSum;
-        var age = this.state.plantGrowth;
-        if (sum >= 50 && sum < 60) {
-            age += 1
-        } else if (sum >= 60) {
-            age -= 1
-        } else {
-            age = age
-        }
-        return age;
     }
 
     handleDelete = (id) => {
@@ -66,7 +51,21 @@ class PlantPage extends Component {
         });
     }
 
+    plantState = () => {
+        var growth = this.state.plantGrowth;
+        console.log(growth);
+        switch(growth) {
+            case 1:
+                return <PlantDisplay />;
+            case 2:
+                return <Sunlight />;
+            default:
+                return null;
+        }
+    }
+
     render() {
+
         return(
             <div>
                 <NavBar 
@@ -78,8 +77,6 @@ class PlantPage extends Component {
                 <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
                 <p>Water Sum {this.state.waterSum}</p>
                 <p>Plant Growth: {this.state.plantGrowth}</p>
-                <PlantDisplay />
-                <Sunlight />
                 <LevelOneWater 
                     id={this.state.id}
                     handleIncrease={this.handleIncrease}
