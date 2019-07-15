@@ -1,0 +1,96 @@
+.Bud {
+    position: absolute;
+    bottom: 0vmin;
+}
+
+.leaf {
+    height: 7vmin;
+    width: 7vmin;
+    background-color: green;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(20deg) rotate(20deg);
+    position: absolute;
+    bottom: 16vmin;
+    margin-left: 12.5vmin;
+}
+
+.leafTwo {
+    content: '';
+    display: block;
+    height: 7vmin;
+    width: 7vmin;
+    background-color: lightgreen;
+    border-top-right-radius: 5vmin;
+    border-bottom-left-radius: 5vmin;
+    transform: skew(-27deg) rotate(52deg);
+    position: absolute;
+    bottom: 11vmin;
+    z-index: 1;
+    margin-left: 19.5vmin;
+}
+
+.leafThree {
+    height: 7vmin;
+    width: 7vmin;
+    display: block;
+    background-color: rgb(76, 173, 76);
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(-7deg) rotate(20deg);
+    position: absolute;
+    bottom: 0vmin;
+    margin-left: 13vmin;
+}
+
+.stem {
+    height: 26vmin;
+    width: 15vmin;
+    background-color: green;
+    position: absolute;
+    margin-left: 12vmin;
+    bottom: -2vmin;
+    clip-path: ellipse(4% 50% at 50% 50%);
+}
+
+.budWrapper {
+    height: 12vmin;
+    width: 12vmin;
+    position: relative;
+    left: 15vmin;
+    bottom: 23vmin;
+}
+
+.bulb {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.budLeaf {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: purple;
+    margin: 0;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    position: absolute;
+    left: -3vmin;
+    bottom: 0;
+    z-index: 1;
+}
+
+.budLeafTwo {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: purple;
+    margin: 0;
+    border-bottom-right-radius: 5vmin;
+    border-top-left-radius: 5vmin;
+    position: absolute;
+    left: 2vmin;
+    bottom: 0;
+    z-index: 1;
+}

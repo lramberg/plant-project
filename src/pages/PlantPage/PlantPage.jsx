@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import PlantDisplay from '../../components/PlantDisplay/PlantDisplay';
-import Sunlight from '../../components/Sunlight/Sunlight';
 import { getPlant, deletePlant, increaseWater } from '../../services/plantService';
 import LevelOneWater from '../../components/LevelOneWater/LevelOneWater';
 import Sprout from '../../components/Sprout/Sprout';
 import Stem from '../../components/Stem/Stem';
+import Bud from '../../components/Bud/Bud';
 
 class PlantPage extends Component {
     constructor() {
@@ -60,7 +60,7 @@ class PlantPage extends Component {
             case 1:
                 return <Stem />;
             case 2:
-                return <Sunlight />;
+                return <Bud />;
             default:
                 return <Sprout />;
         }
