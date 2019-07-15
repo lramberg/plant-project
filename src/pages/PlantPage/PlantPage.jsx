@@ -56,7 +56,7 @@ class PlantPage extends Component {
         console.log(growth);
         switch(growth) {
             case 1:
-                return <PlantDisplay />;
+                return ;
             case 2:
                 return <Sunlight />;
             default:
@@ -65,6 +65,7 @@ class PlantPage extends Component {
     }
 
     render() {
+        var plantState = this.plantState();
 
         return(
             <div>
@@ -77,11 +78,13 @@ class PlantPage extends Component {
                 <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
                 <p>Water Sum {this.state.waterSum}</p>
                 <p>Plant Growth: {this.state.plantGrowth}</p>
+                <PlantDisplay />
                 <LevelOneWater 
                     id={this.state.id}
                     handleIncrease={this.handleIncrease}
                     handleDecrease={this.handleDecrease}
                 />
+                {plantState}
             </div>
         );
     }

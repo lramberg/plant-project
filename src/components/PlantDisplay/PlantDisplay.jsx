@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import styles from './PlantDisplay.module.css';
 
 class PlantDisplay extends Component {
 
     render() {
         return(
-            <div>
+            <div className={styles.PlantDisplay}>
                 PlantDisplay
             </div>
         )
