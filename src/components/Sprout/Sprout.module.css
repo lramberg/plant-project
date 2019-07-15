@@ -1,0 +1,29 @@
+.Sprout {
+    position: absolute;
+    bottom: 0;
+}
+
+.leaf {
+    height: 7vmin;
+    width: 7vmin;
+    background-color: green;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(20deg) rotate(20deg);
+    position: relative;
+    bottom: 0;
+    margin-left: 14vmin;
+}
+
+.leaf::after {
+    content: '';
+    display: block;
+    height: 7vmin;
+    width: 7vmin;
+    background-color: lightgreen;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(20deg) rotate(45deg);
+    bottom: 0;
+    margin-left: 3vmin;
+}

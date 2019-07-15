@@ -25,4 +25,12 @@
     bottom: 1vmin;
     margin: auto;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    z-index: 3;
+}
+
+.componentContainer {
+    height: 45vmin;
+    width: 100vmin;
+    background-color: bisque;
+    position: relative;
 }

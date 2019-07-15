@@ -1,0 +1,41 @@
+.Stem {
+    position: absolute;
+    bottom: 0vmin;
+}
+
+.leaf {
+    height: 7vmin;
+    width: 7vmin;
+    background-color: green;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(20deg) rotate(20deg);
+    position: absolute;
+    bottom: 0;
+    margin-left: 14.5vmin;
+}
+
+.leaf::after {
+    content: '';
+    display: block;
+    height: 7vmin;
+    width: 7vmin;
+    background-color: lightgreen;
+    border-top-right-radius: 5vmin;
+    border-bottom-left-radius: 5vmin;
+    transform: skew(-27deg) rotate(52deg);
+    position: absolute;
+    bottom: 2vmin;
+    z-index: 1;
+    margin-left: 5vmin;
+}
+
+.stem {
+    height: 17vmin;
+    width: 15vmin;
+    background-color: green;
+    position: absolute;
+    margin-left: 12vmin;
+    bottom: -2vmin;
+    clip-path: ellipse(4% 50% at 50% 50%);
+}
