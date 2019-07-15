@@ -5,6 +5,8 @@ import PlantDisplay from '../../components/PlantDisplay/PlantDisplay';
 import Sunlight from '../../components/Sunlight/Sunlight';
 import { getPlant, deletePlant, increaseWater } from '../../services/plantService';
 import LevelOneWater from '../../components/LevelOneWater/LevelOneWater';
+import Sprout from '../../components/Sprout/Sprout';
+import Stem from '../../components/Stem/Stem';
 
 class PlantPage extends Component {
     constructor() {
@@ -56,11 +58,11 @@ class PlantPage extends Component {
         console.log(growth);
         switch(growth) {
             case 1:
-                return ;
+                return <Stem />;
             case 2:
                 return <Sunlight />;
             default:
-                return null;
+                return <Sprout />;
         }
     }
 
@@ -78,13 +80,14 @@ class PlantPage extends Component {
                 <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
                 <p>Water Sum {this.state.waterSum}</p>
                 <p>Plant Growth: {this.state.plantGrowth}</p>
-                <PlantDisplay />
+                <PlantDisplay 
+                    plantState={plantState}
+                />
                 <LevelOneWater 
                     id={this.state.id}
                     handleIncrease={this.handleIncrease}
                     handleDecrease={this.handleDecrease}
                 />
-                {plantState}
             </div>
         );
     }

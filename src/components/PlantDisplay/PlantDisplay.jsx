@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styles from './PlantDisplay.module.css';
-import Sprout from '../Sprout/Sprout';
-import Stem from '../Stem/Stem';
+
 
 class PlantDisplay extends Component {
 
@@ -9,7 +8,7 @@ class PlantDisplay extends Component {
         return(
             <div className={styles.PlantDisplay}>
                 <div className={styles.componentContainer}>
-                    <Stem />
+                    {this.props.plantState}
                 </div>
                 <div className={styles.rim}></div>
                 <div className={styles.pot}></div>             
