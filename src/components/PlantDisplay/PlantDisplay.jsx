@@ -6,7 +6,9 @@ class PlantDisplay extends Component {
     render() {
         return(
             <div className={styles.PlantDisplay}>
-                PlantDisplay
+                PlantDisplay               
+                <div className={styles.rim}></div>
+                <div className={styles.pot}></div>             
             </div>
         )
     }
