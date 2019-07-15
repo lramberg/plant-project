@@ -7,6 +7,7 @@ import LevelOneWater from '../../components/LevelOneWater/LevelOneWater';
 import Sprout from '../../components/Sprout/Sprout';
 import Stem from '../../components/Stem/Stem';
 import Bud from '../../components/Bud/Bud';
+import Flower from '../../components/Flower/Flower';
 
 class PlantPage extends Component {
     constructor() {
@@ -61,6 +62,8 @@ class PlantPage extends Component {
                 return <Stem />;
             case 2:
                 return <Bud />;
+            case 3:
+                return <Flower />;
             default:
                 return <Sprout />;
         }

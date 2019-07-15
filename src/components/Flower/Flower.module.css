@@ -1,0 +1,129 @@
+.Flower {
+    position: absolute;
+    bottom: 0vmin;
+}
+
+.leaf {
+    height: 7vmin;
+    width: 7vmin;
+    background-color: green;
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(20deg) rotate(20deg);
+    position: absolute;
+    bottom: 16vmin;
+    margin-left: 12.5vmin;
+}
+
+.leafTwo {
+    content: '';
+    display: block;
+    height: 7vmin;
+    width: 7vmin;
+    background-color: lightgreen;
+    border-top-right-radius: 5vmin;
+    border-bottom-left-radius: 5vmin;
+    transform: skew(-27deg) rotate(52deg);
+    position: absolute;
+    bottom: 11vmin;
+    z-index: 1;
+    margin-left: 19.5vmin;
+}
+
+.leafThree {
+    height: 7vmin;
+    width: 7vmin;
+    display: block;
+    background-color: rgb(76, 173, 76);
+    border-bottom-left-radius: 5vmin;
+    border-top-right-radius: 5vmin;
+    transform: skew(-7deg) rotate(20deg);
+    position: absolute;
+    bottom: 0vmin;
+    margin-left: 13vmin;
+}
+
+.stem {
+    height: 33vmin;
+    width: 15vmin;
+    background-color: green;
+    position: absolute;
+    margin-left: 12vmin;
+    bottom: -2vmin;
+    clip-path: ellipse(4% 50% at 50% 50%);
+}
+
+.flowerWrapper {
+    height: 20vmin;
+    width: 20vmin;
+    position: relative;
+    left: 10vmin;
+    bottom: 25vmin;
+}
+
+.bulb {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    left: 5vmin;
+    bottom: 5vmin;
+    z-index: 2;
+}
+
+.flowerLeaf {
+    height: 12vmin;
+    width: 12vmin;
+    background-color: purple;
+    margin: 0;
+    border-bottom-left-radius: 7vmin;
+    border-top-right-radius: 7vmin;
+    transform: skew(10deg);
+    position: absolute;
+    left: 1vmin;
+    bottom: 8vmin;
+    z-index: 1;
+}
+
+.flowerLeafTwo {
+    height: 12vmin;
+    width: 12vmin;
+    background-color: hotpink;
+    margin: 0;
+    border-bottom-right-radius: 7vmin;
+    border-top-left-radius: 7vmin;
+    transform: skew(-10deg);
+    position: absolute;
+    left: 7vmin;
+    bottom: 8vmin;
+    z-index: 1;
+}
+
+.flowerLeafThree {
+    height: 12vmin;
+    width: 12vmin;
+    background-color: hotpink;
+    margin: 0;
+    border-bottom-left-radius: 7vmin;
+    border-top-right-radius: 7vmin;
+    transform: skew(10deg) scaleY(-1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.flowerLeafFour {
+    height: 12vmin;
+    width: 12vmin;
+    background-color: purple;
+    margin: 0;
+    border-bottom-right-radius: 7vmin;
+    border-top-left-radius: 7vmin;
+    transform: skew(-10deg) scaleY(-1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
