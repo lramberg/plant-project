@@ -49,3 +49,19 @@ export function deletePlant(id) {
         return res.json()
     });
 }
+
+// increase or decrease water
+export function increaseWater(id, type) {
+    var type = type === "decreaseWater" ? "decreaseWater" : "increaseWater";
+    return fetch(`/api/plants/${id}/${type}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        waterSum: 1
+      }),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(function(res) {
+        return res.json()
+    });
+  }

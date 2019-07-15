@@ -6,6 +6,7 @@ var plantSchema = new Schema({
     name: String,
     watering: Array,
     brightness: Array,
+    waterSum: { type: Number, default: 0 },
     growth: { type: Number, default: 0 }
 }, {
     timestamps: true

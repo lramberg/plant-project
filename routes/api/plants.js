@@ -9,6 +9,8 @@ router.use(require('../../config/auth'));
 router.post('/', plantsCtrl.createPlant);
 router.delete('/:id', plantsCtrl.deletePlant);
 router.put('/:id', plantsCtrl.updatePlant);
+router.put('/:id/increaseWater', plantsCtrl.increaseWater);
+router.put('/:id/decreaseWater', plantsCtrl.decreaseWater);
 
 function checkAuth(req, res, next) {
     if(req.user) return next();

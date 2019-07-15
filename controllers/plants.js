@@ -6,7 +6,9 @@ module.exports = {
     getOnePlant,
     createPlant,
     deletePlant,
-    updatePlant
+    updatePlant,
+    increaseWater,
+    decreaseWater
 };
   
 function updatePlant(req, res) {
@@ -51,11 +53,20 @@ function getAllPlants(req, res) {
     // })
 }
 
-// function getAllPlants(req, res) {
-//     User.findById(req.user._id).exec(function(err, user) {
-//         Plant.find({'userId': user._id }).then(function(plants) {
-//             console.log(plants);
-//             res.status(200).json(plants);
-//         });
-//     });
-// }
+function increaseWater(req, res) {
+    Plant.findById(req.params.id).then(function(plant) {
+        plant.waterSum += 8;
+        plant.save(function(plant) {
+            res.status(200).json(plant);
+        })
+    })
+}
+
+function decreaseWater(req, res) {
+    Plant.findById(req.params.id).then(function(plant) {
+        plant.waterSum -= 3;
+        plant.save(function(plant) {
+            res.status(200).json(plant);
+        })
+    })
+}

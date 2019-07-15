@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import PlantDisplay from '../../components/PlantDisplay/PlantDisplay';
 import Sunlight from '../../components/Sunlight/Sunlight';
-import { getPlant, deletePlant } from '../../services/plantService';
+import { getPlant, deletePlant, increaseWater } from '../../services/plantService';
 import LevelOneWater from '../../components/LevelOneWater/LevelOneWater';
 
 class PlantPage extends Component {
@@ -60,12 +60,22 @@ class PlantPage extends Component {
         })
     }
 
-    handleIncrease = () => {
-        this.setState({ waterSum: this.increaseWater(), plantGrowth: this.determinePlantGrowth() })
+    handleIncrease = (id, type) => {
+        var self = this;
+        increaseWater(id, type).then(function(json) {
+            getPlant(id).then(function(plant) {
+                self.setState({ waterSum: plant.waterSum })
+            });
+        });
     }
 
-    handleDecrease = () => {
-        this.setState({ waterSum: this.decreaseWater(),  plantGrowth: this.determinePlantGrowth() })
+    handleDecrease = (id, type) => {
+        var self = this;
+        increaseWater(id, type).then(function(json) {
+            getPlant(id).then(function(plant) {
+                self.setState({ waterSum: plant.waterSum })
+            });
+        });
     }
 
     render() {
@@ -83,6 +93,7 @@ class PlantPage extends Component {
                 <PlantDisplay />
                 <Sunlight />
                 <LevelOneWater 
+                    id={this.state.id}
                     handleIncrease={this.handleIncrease}
                     handleDecrease={this.handleDecrease}
                 />

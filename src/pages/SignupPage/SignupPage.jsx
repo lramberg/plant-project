@@ -26,9 +26,12 @@ class SignupPage extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('handle submit reached');
         try {
+        console.log('try reached');
         await userService.signup(this.state);
         // Let <App> know a user has signed up!
+        console.log('user service done');
         this.props.handleSignupOrLogin();
         // Successfully signed up - show GamePage
         this.props.history.push('/profile');
