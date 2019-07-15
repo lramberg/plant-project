@@ -56,6 +56,11 @@ function getAllPlants(req, res) {
 function increaseWater(req, res) {
     Plant.findById(req.params.id).then(function(plant) {
         plant.waterSum += 8;
+        if (plant.waterSum >= 50 && plant.waterSum <= 55) {
+            plant.growth += 1;
+        } else if (plant.waterSum > 55) {
+            plant.growth -+ 1;
+        }
         plant.save(function(plant) {
             res.status(200).json(plant);
         })
@@ -65,6 +70,11 @@ function increaseWater(req, res) {
 function decreaseWater(req, res) {
     Plant.findById(req.params.id).then(function(plant) {
         plant.waterSum -= 3;
+        if (plant.waterSum >= 50 && plant.waterSum <= 55) {
+            plant.growth += 1;
+        } else if (plant.waterSum > 55) {
+            plant.growth -+ 1;
+        }
         plant.save(function(plant) {
             res.status(200).json(plant);
         })

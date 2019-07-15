@@ -14,8 +14,8 @@ class PlantPage extends Component {
             name: '',
             watering: [],
             brightness: [],
-            waterSum: 0,
-            plantGrowth: 0
+            waterSum: '',
+            plantGrowth: ''
         }
     }
 
@@ -25,20 +25,8 @@ class PlantPage extends Component {
 
         getPlant(id).then(function(plant) {
             console.log(plant);
-            self.setState({ id: id, name: plant.name });
+            self.setState({ id: id, name: plant.name, waterSum: plant.waterSum, plantGrowth: plant.growth });
         });
-    }
-
-    increaseWater() {
-        var sum = this.state.waterSum;
-        sum += 8;
-        return sum;
-    }
-
-    decreaseWater() {
-        var sum = this.state.waterSum;
-        sum -= 3;
-        return sum;
     }
 
     determinePlantGrowth() {
@@ -64,7 +52,7 @@ class PlantPage extends Component {
         var self = this;
         increaseWater(id, type).then(function(json) {
             getPlant(id).then(function(plant) {
-                self.setState({ waterSum: plant.waterSum })
+                self.setState({ waterSum: plant.waterSum, plantGrowth: plant.growth })
             });
         });
     }
@@ -73,7 +61,7 @@ class PlantPage extends Component {
         var self = this;
         increaseWater(id, type).then(function(json) {
             getPlant(id).then(function(plant) {
-                self.setState({ waterSum: plant.waterSum })
+                self.setState({ waterSum: plant.waterSum, plantGrowth: plant.growth })
             });
         });
     }
