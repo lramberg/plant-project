@@ -76,8 +76,22 @@ class PlantPage extends Component {
         }
     }
 
+    soilCondition = () => {
+        let water = this.state.waterSum;
+        let soil = '';
+        if (water < 8) {
+            soil = 'too dry';
+        } else if (water > 20) {
+            soil = 'very wet';
+        } else {
+            soil = 'moist'
+        }
+        return soil;
+    }
+
     render() {
         var plantState = this.plantState();
+        var soil = this.soilCondition();
 
         return(
             <div className={styles.PlantPage}>
@@ -91,8 +105,8 @@ class PlantPage extends Component {
                             <h1 className={styles.h1}>{this.state.name}</h1>
                             <a href="#" className="btn" onClick={() => this.handleDelete(this.state.id)}><i className="fa fa-trash"></i></a>
                             <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-outline-light">RENAME</Link>
-                            <p className={styles.p}>Hint: When a plant grows it needs more sun initially</p>
-                            <p>Water Sum {this.state.waterSum}</p>
+                            <p className={styles.p}>Hint: When a plant grows it initially needs more sun</p>
+                            <h4 className={styles.h4}>Soil Condition: {soil}</h4>
                         </div>
                         <div className="col-5">
                             <PlantDisplay 
