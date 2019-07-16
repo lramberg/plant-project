@@ -1,0 +1,38 @@
+.HomePage {
+    font-family: 'Merienda', cursive;
+    background-color: rosybrown;
+    color: rgb(203, 250, 203);
+    height: 60vh;
+    width: 80vw;
+    margin-top: 20vh;
+    border: 2px solid rgb(203, 250, 203);
+    border-radius: 5px;
+}
+
+.h1 {
+    font-style: italic;
+    font-size: 12vmin;
+    padding: 5vmin;
+}
+
+.h3 {
+    font-size: 9vmin;
+    color: rgb(250, 239, 210);
+}
+
+.link {
+    font-family: 'Taviraj', serif;
+    font-weight: bold;
+}
+
+.linkWrapper {
+    height: 9vmin;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vmin;
+    display: flex;
+    justify-content: space-around;
+    font-size: 4vmin;
+    color: lightblue;
+}

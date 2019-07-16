@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 import Index from '../../components/Index/Index';
 import Create from '../../components/Create/Create';
-import Edit from '../../components/Edit/Edit';
 import NavBar from '../../components/NavBar/NavBar';
 
 
