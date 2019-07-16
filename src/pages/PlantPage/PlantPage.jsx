@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import PlantDisplay from '../../components/PlantDisplay/PlantDisplay';
 import { getPlant, deletePlant, increaseWater } from '../../services/plantService';
-import LevelOneWater from '../../components/LevelOneWater/LevelOneWater';
+import Actions from '../../components/Actions/Actions';
 import Sprout from '../../components/Sprout/Sprout';
 import Stem from '../../components/Stem/Stem';
 import Bud from '../../components/Bud/Bud';
@@ -86,7 +86,7 @@ class PlantPage extends Component {
                 <PlantDisplay 
                     plantState={plantState}
                 />
-                <LevelOneWater 
+                <Actions 
                     id={this.state.id}
                     handleIncrease={this.handleIncrease}
                     handleDecrease={this.handleDecrease}

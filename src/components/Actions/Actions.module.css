@@ -1,0 +1,81 @@
+.Actions {
+    height: 40vmin;
+    width: 40vmin;
+    background-color: lightgray;
+    position: relative;
+}
+
+.canWrapper {
+    height: 15vmin;
+    width: 10vmin;
+    position: relative;
+}
+
+.handle {
+    height: 12vmin;
+    width: 8vmin;
+    border-radius: 50%;
+    border: 7px solid purple;
+    position: absolute;
+    bottom: 49vmin;
+    left: 67vmin;
+}
+
+.body {
+    height: 15vmin;
+    width: 15vmin;
+    background-color: purple;
+    margin: 0;
+    border-bottom-right-radius: 4vmin;
+    border-top-left-radius: 4vmin;
+    position: absolute;
+    left: 65vmin;
+    bottom: 40vmin;
+}
+
+.spout {
+    height: 15vmin;
+    width: 15vmin;
+    background-color: purple;
+    position: absolute;
+    left: 75vmin;
+    bottom: 45vmin;
+    clip-path: polygon(0 59%, 100% 0, 100% 8%, 0% 100%);
+}
+
+.sunWrapper {
+
+}
+
+.sun {
+    height: 12vmin;
+    width: 12vmin;
+    border-radius: 50%;
+    background-color: gold;
+    border: 7px solid orange;
+    position: absolute;
+    bottom: 49vmin;
+    left: 68vmin;
+    z-index: 1;
+}
+
+.rays1 {
+    height: 30vmin;
+    width: 30vmin;
+    background-color: gold;
+    position: absolute;
+    bottom: 41vmin;
+    left: 60vmin;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.rays2 {
+    height: 30vmin;
+    width: 30vmin;
+    background-color: orange;
+    position: absolute;
+    bottom: 41vmin;
+    left: 60vmin;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: rotate(30deg);
+}
