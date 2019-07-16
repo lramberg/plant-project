@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../services/userService';
+import styles from '../LoginPage/LoginPage.module.css';
 
 class SignupPage extends Component {
 
@@ -47,8 +48,7 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <div>
-        <header className="header-footer">Sign Up</header>
+      <div className={styles.LoginPage}> 
         <p>{this.state.message}</p>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
@@ -73,8 +73,8 @@ class SignupPage extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <button className="btn btn-outline-light mr-5" disabled={this.isFormInvalid()}>Sign Up</button>
+              <Link className="btn btn-outline-light" to='/'>Cancel</Link>
             </div>
           </div>
         </form>

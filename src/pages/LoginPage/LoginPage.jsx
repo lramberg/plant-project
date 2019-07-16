@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../services/userService';
+import styles from './LoginPage.module.css';
 
 class LoginPage extends Component {
   
@@ -11,7 +12,6 @@ class LoginPage extends Component {
 
   handleChange = (e) => {
     this.setState({
-      // Using ES2015 Computed Property Names
       [e.target.name]: e.target.value
     });
   }
@@ -20,21 +20,17 @@ class LoginPage extends Component {
     e.preventDefault();
     try {
       await userService.login(this.state);
-      // Let <App> know a user has signed up!
       this.props.handleSignupOrLogin();
-      // Successfully signed up 
       this.props.history.push('/profile');
     } catch (err) {
         console.log(err);
-      // Use a modal or toast in your apps instead of alert
       alert('Invalid Credentials!');
     }
   }
 
   render() {
     return (
-      <div className="LoginPage">
-        <header className="header-footer">Log In</header>
+      <div className={styles.LoginPage}>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <div className="col-sm-12">
@@ -48,8 +44,8 @@ class LoginPage extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12 text-center">
-              <button className="btn btn-default">Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <button className="btn btn-outline-light mr-5">Log In</button>
+              <Link className="btn btn-outline-light" to='/'>Cancel</Link>
             </div>
           </div>
         </form>
