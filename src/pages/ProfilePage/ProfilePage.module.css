@@ -1,0 +1,11 @@
+.h1 {
+    font-family: 'Merienda', cursive;
+    margin-top: 5vmin;
+    color: rgb(250, 239, 210);
+    text-decoration: underline;
+    padding: 3vmin;
+}
+
+.btn {
+    font-size: 4vmin;
+}

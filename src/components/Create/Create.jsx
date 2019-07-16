@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { createPlant } from '../../services/plantService';
+import styles from './Create.module.css';
 
 class Create extends Component {
     constructor() {
@@ -25,15 +26,15 @@ class Create extends Component {
      
     render() {
         return (
-            <div>
+            <div className={styles.Create}>
                 <form onSubmit={this.handleSubmit} >
-                    <label>NAME YOUR BUDDY: </label>
-                    <input onChange={ this.handleName } value={ this.state.name } />
+                    <h3>NAME YOUR BUDDY: </h3>
+                    <input onChange={ this.handleName } value={ this.state.name } placeholder="Name"/>
                     <input className="btn" type="submit" value="Submit" />
                 </form>
                 <Link className="btn" to='/profile'>Cancel</Link>
 
-                <ul>
+                <ul className={styles.ul}>
                     <li>Water your plant by clicking the watering can</li>
                     <li>Click the Sun to help it grow</li>
                     <li>Too much of good thing can do harm</li>

@@ -64,7 +64,7 @@
 .bulb {
     height: 10vmin;
     width: 10vmin;
-    background-color: gold;
+    background-color: rgb(255, 189, 67);
     border-radius: 50%;
     position: absolute;
     left: 5vmin;
@@ -75,7 +75,7 @@
 .flowerLeaf {
     height: 12vmin;
     width: 12vmin;
-    background-color: purple;
+    background-color: rgb(192, 138, 192);
     margin: 0;
     border-bottom-left-radius: 7vmin;
     border-top-right-radius: 7vmin;
@@ -89,7 +89,7 @@
 .flowerLeafTwo {
     height: 12vmin;
     width: 12vmin;
-    background-color: hotpink;
+    background-color: rgb(255, 141, 141);
     margin: 0;
     border-bottom-right-radius: 7vmin;
     border-top-left-radius: 7vmin;
@@ -103,7 +103,7 @@
 .flowerLeafThree {
     height: 12vmin;
     width: 12vmin;
-    background-color: hotpink;
+    background-color: rgb(255, 141, 141);
     margin: 0;
     border-bottom-left-radius: 7vmin;
     border-top-right-radius: 7vmin;
@@ -117,7 +117,7 @@
 .flowerLeafFour {
     height: 12vmin;
     width: 12vmin;
-    background-color: purple;
+    background-color: rgb(192, 138, 192);
     margin: 0;
     border-bottom-right-radius: 7vmin;
     border-top-left-radius: 7vmin;

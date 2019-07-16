@@ -1,0 +1,17 @@
+.Index {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.li {
+    font-size: 4vmin;
+    font-weight: bold;
+    color: rgb(192, 236, 230);
+}
+
+.ul {
+    list-style: none;
+    padding-inline-start: 0;
+}

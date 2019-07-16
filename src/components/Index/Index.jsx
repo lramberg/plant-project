@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getPlants } from '../../services/plantService';
+import styles from './Index.module.css';
 
 class Index extends Component {
     constructor() {
@@ -22,15 +23,15 @@ class Index extends Component {
             {if(plant.userId === this.props.user._id){
                 return (
                     <li key={idx}>
-                        <Link to={`/buddy/${plant._id}`} className="btn btn-primary">{plant.name}</Link>
+                        <Link to={`/buddy/${plant._id}`} className={styles.li}>{plant.name}</Link>
                     </li>
                 )
             }}
         });
 
         return(
-            <div>
-                <ul>
+            <div className={styles.Index}>
+                <ul className={styles.ul}>
                     {buddies}
                 </ul>
             </div>

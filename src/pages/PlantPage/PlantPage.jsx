@@ -8,6 +8,7 @@ import Sprout from '../../components/Sprout/Sprout';
 import Stem from '../../components/Stem/Stem';
 import Bud from '../../components/Bud/Bud';
 import Flower from '../../components/Flower/Flower';
+import styles from './PlantPage.module.css';
 
 class PlantPage extends Component {
     constructor() {
@@ -79,24 +80,34 @@ class PlantPage extends Component {
         var plantState = this.plantState();
 
         return(
-            <div>
+            <div className={styles.PlantPage}>
                 <NavBar 
                     user={this.props.user}
                     handleLogout={this.props.handleLogout}
                 />
-                <h1>{this.state.name}</h1>
-                <a href="#" className="btn btn-info" onClick={() => this.handleDelete(this.state.id)}>Delete Post <i className="fa fa-trash"></i></a>
-                <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
-                <p>Water Sum {this.state.waterSum}</p>
-                <p>Plant Growth: {this.state.plantGrowth}</p>
-                <PlantDisplay 
-                    plantState={plantState}
-                />
-                <Actions 
-                    id={this.state.id}
-                    handleIncrease={this.handleIncrease}
-                    handleDecrease={this.handleDecrease}
-                />
+                <div className="container-fluid mt-5">
+                    <div className="row">
+                        <div className="col-4">
+                            <h1>{this.state.name}</h1>
+                            <a href="#" className="btn" onClick={() => this.handleDelete(this.state.id)}><i className="fa fa-trash"></i></a>
+                            <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
+                            <p>Water Sum {this.state.waterSum}</p>
+                            <p>Plant Growth: {this.state.plantGrowth}</p>
+                        </div>
+                        <div className="col-5">
+                            <PlantDisplay 
+                                plantState={plantState}
+                            />                       
+                        </div>
+                        <div className="col-3">                       
+                            <Actions 
+                                id={this.state.id}
+                                handleIncrease={this.handleIncrease}
+                                handleDecrease={this.handleDecrease}
+                            />                       
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
