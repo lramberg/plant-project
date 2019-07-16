@@ -60,7 +60,7 @@
     height: 12vmin;
     width: 12vmin;
     border-radius: 50%;
-    background-color: gold;
+    background-color: rgb(255, 208, 0);
     border: 7px solid orange;
     position: absolute;
     bottom: 7vmin;
@@ -71,7 +71,7 @@
 .rays1 {
     height: 30vmin;
     width: 30vmin;
-    background-color: gold;
+    background-color: rgb(255, 208, 0);
     position: absolute;
     bottom: -2vmin;
     left: -3vmin;
