@@ -93,7 +93,6 @@ class PlantPage extends Component {
                             <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-outline-light">RENAME</Link>
                             <p className={styles.p}>Hint: When a plant grows it needs more sun initially</p>
                             <p>Water Sum {this.state.waterSum}</p>
-                            <p>Plant Growth: {this.state.plantGrowth}</p>
                         </div>
                         <div className="col-5">
                             <PlantDisplay 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import PlantPage from './pages/PlantPage/PlantPage';
 import SignupPage from './pages/SignupPage/SignupPage';
@@ -36,10 +36,13 @@ class App extends Component {
                     <Edit {...props} />
                 } />    
                 <Route exact path='/create' render={({ props }) => 
+                    userService.getUser() ?
                     <Create 
                         {...props}
                         user={this.state.user}
                     />
+                    :
+                    <Redirect to='/login' />
                 } />
                 <Route exact path='/buddy/:id' render={(props) => 
                     <PlantPage
