@@ -1,0 +1,24 @@
+.NavBar {
+    width: 100vw;
+    height: 10vmin;
+    background-color: rosybrown;
+    position: relative;
+    border-bottom: 1px solid rgba(203, 250, 203, 0.705);
+}
+
+.logo {
+    font-family: 'Merienda', cursive;
+    font-size: 7vmin;
+    font-style: italic;
+    color: rgb(203, 250, 203);
+    position: absolute;
+    left: 8vmin;
+    top: 0vmin;
+}
+
+.logout {
+    font-size: 5vmin;
+    position: absolute;
+    right: 8vmin;
+    top: 2.5vmin;
+}
