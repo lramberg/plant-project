@@ -31,7 +31,6 @@ function getOnePlant(req, res) {
 
 function createPlant(req, res) {
    User.findById(req.user._id).exec(function(err, user) {
-       console.log(user);
        Plant.create(req.body, function(err, plant) {
            plant.userId = user._id;
            user.plants.push(plant._id);

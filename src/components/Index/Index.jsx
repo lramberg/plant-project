@@ -19,7 +19,7 @@ class Index extends Component {
 
     render(props) {
         var buddies = this.state.plants.map((plant, idx) => {
-            {if(plant.userId == this.props.user._id){
+            {if(plant.userId === this.props.user._id){
                 return (
                     <li key={idx}>
                         <Link to={`/buddy/${plant._id}`} className="btn btn-primary">{plant.name}</Link>

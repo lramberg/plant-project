@@ -20,7 +20,7 @@ const ProfilePage = (props) => {
                     <Index user={props.user}/>
                 } />
                 <Route exact path='/create' render={() => 
-                    <Create />
+                    <Create {...this.props}/>
                 } />
             </Switch>
         </div>
