@@ -10,6 +10,10 @@
     position: relative;
 }
 
+.canWrapper:hover {
+    cursor: pointer;
+}
+
 .handle {
     height: 12vmin;
     width: 8vmin;
@@ -46,6 +50,10 @@
     height: 30vmin;
     width: 30vmin;
     position: relative;
+}
+
+.sunWrapper:hover {
+    cursor: pointer;
 }
 
 .sun {

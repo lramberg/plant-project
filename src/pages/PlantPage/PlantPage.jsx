@@ -88,9 +88,10 @@ class PlantPage extends Component {
                 <div className="container-fluid mt-5">
                     <div className="row">
                         <div className="col-4">
-                            <h1>{this.state.name}</h1>
+                            <h1 className={styles.h1}>{this.state.name}</h1>
                             <a href="#" className="btn" onClick={() => this.handleDelete(this.state.id)}><i className="fa fa-trash"></i></a>
-                            <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-secondary">Edit Plant</Link>
+                            <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-outline-light">RENAME</Link>
+                            <p className={styles.p}>Hint: When a plant grows it needs more sun initially</p>
                             <p>Water Sum {this.state.waterSum}</p>
                             <p>Plant Growth: {this.state.plantGrowth}</p>
                         </div>

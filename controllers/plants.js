@@ -43,21 +43,18 @@ function createPlant(req, res) {
 }
 
 function getAllPlants(req, res) {
-    // User.findById(req.user._id).then(function(err, user){
-    //     console.log(user)
         Plant.find().then(function(plants) {
             console.log(plants);
             res.status(200).json(plants);
         });
-    // })
 }
 
 function increaseWater(req, res) {
     Plant.findById(req.params.id).then(function(plant) {
         plant.waterSum += 8;
-        if (plant.waterSum >= 30 && plant.waterSum <= 33) {
+        if (plant.waterSum >= 20 && plant.waterSum <= 23) {
             plant.growth += 1;
-        } else if (plant.waterSum > 33) {
+        } else if (plant.waterSum > 23) {
             plant.growth -= .5;
         }
         plant.save(function(plant) {
@@ -69,9 +66,9 @@ function increaseWater(req, res) {
 function decreaseWater(req, res) {
     Plant.findById(req.params.id).then(function(plant) {
         plant.waterSum -= 3;
-        if (plant.waterSum >= 30 && plant.waterSum <= 33) {
+        if (plant.waterSum >= 20 && plant.waterSum <= 23) {
             plant.growth += 1;
-        } else if (plant.waterSum > 33) {
+        } else if (plant.waterSum > 23) {
             plant.growth -= .5;
         }
         plant.save(function(plant) {

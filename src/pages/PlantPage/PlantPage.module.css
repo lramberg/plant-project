@@ -1,3 +1,15 @@
-.PlantPage {
-    
+
+
+.h1 {
+    font-family: 'Merienda', cursive;
+    font-size: 9vmin;
+    color: rgb(250, 239, 210);
+    text-decoration: underline;
+    padding: 3vmin;
+}
+
+.p {
+    font-size: 5vmin;
+    color: rgb(250, 239, 210);
+    margin-top: 4vmin;
 }

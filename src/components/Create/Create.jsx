@@ -28,11 +28,11 @@ class Create extends Component {
         return (
             <div className={styles.Create}>
                 <form onSubmit={this.handleSubmit} >
-                    <h3>NAME YOUR BUDDY: </h3>
+                    <h1>NAME YOUR BUDDY: </h1>
                     <input onChange={ this.handleName } value={ this.state.name } placeholder="Name"/>
-                    <input className="btn" type="submit" value="Submit" />
+                    <input className="btn btn-outline-light ml-2" type="submit" value="Submit" />
+                    <Link className="btn btn-outline-light ml-2" to='/profile'>Cancel</Link>
                 </form>
-                <Link className="btn" to='/profile'>Cancel</Link>
 
                 <ul className={styles.ul}>
                     <li>Water your plant by clicking the watering can</li>

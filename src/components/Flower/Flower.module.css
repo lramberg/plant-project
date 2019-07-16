@@ -72,6 +72,39 @@
     z-index: 2;
 }
 
+.eyeL {
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    background-color: rgb(54, 54, 93);
+    position: absolute;
+    bottom: 11vmin;
+    left: 7vmin;
+    z-index: 2;
+}
+
+.eyeR {
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 50%;
+    background-color: rgb(54, 54, 93);
+    position: absolute;
+    bottom: 11vmin;
+    left: 11vmin;
+    z-index: 2;
+}
+
+.smile {
+    height: 4vmin;
+    width: 4vmin;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 8vmin;
+    left: 8vmin;
+    border-bottom: 6px solid rgb(54, 54, 93);
+    z-index: 2;
+}
+
 .flowerLeaf {
     height: 12vmin;
     width: 12vmin;

@@ -5,6 +5,8 @@
     position: relative;
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
   
 .rim {
@@ -29,7 +31,7 @@
 }
 
 .componentContainer {
-    height: 45vmin;
+    height: 45.5vmin;
     width: 100vmin;
     background-color: bisque;
     position: relative;

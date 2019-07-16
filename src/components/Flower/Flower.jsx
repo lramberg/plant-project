@@ -13,7 +13,11 @@ const Flower = (props) => {
                 <div className={styles.flowerLeafTwo}></div>
                 <div className={styles.flowerLeafThree}></div>
                 <div className={styles.flowerLeafFour}></div>
-                <div className={styles.bulb}></div>
+                <div className={styles.bulb}>
+                </div>
+                <div className={styles.eyeL}></div>
+                <div className={styles.eyeR}></div>
+                <div className={styles.smile}></div>
             </div>
         </div>
     );
