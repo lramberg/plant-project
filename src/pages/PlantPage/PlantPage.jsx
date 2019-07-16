@@ -60,9 +60,15 @@ class PlantPage extends Component {
         switch(growth) {
             case 1:
                 return <Stem />;
+            case 1.5:
+                return <Stem />;
             case 2:
                 return <Bud />;
+            case 2.5:
+                return <Bud />;
             case 3:
+                return <Flower />;
+            case 3.5:
                 return <Flower />;
             default:
                 return <Sprout />;
