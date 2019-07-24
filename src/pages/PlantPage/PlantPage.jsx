@@ -82,7 +82,7 @@ class PlantPage extends Component {
         if (water < 8) {
             soil = 'too dry';
         } else if (water > 20) {
-            soil = 'very wet';
+            soil = 'too wet';
         } else {
             soil = 'moist'
         }
@@ -106,7 +106,8 @@ class PlantPage extends Component {
                             <a href="#" className="btn" onClick={() => this.handleDelete(this.state.id)}><i className="fa fa-trash"></i></a>
                             <Link to={`/buddy/${this.state.id}/edit`} className="btn btn-outline-light">RENAME</Link>
                             <p className={styles.p}>Hint: When a plant grows it initially needs more sun</p>
-                            <h4 className={styles.h4}>Soil Condition: {soil}</h4>
+                            <h4 className={styles.h4}>Soil Condition:</h4>
+                            <h3 className={styles.h3}>{soil}</h3>
                         </div>
                         <div className="col-5">
                             <PlantDisplay 

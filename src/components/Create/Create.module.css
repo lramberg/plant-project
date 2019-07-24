@@ -6,5 +6,11 @@
 .ul {
     text-align: left;
     margin-top: 3vmin;
-    font-size: 5vmin;
+    font-size: 4vmin;
+}
+
+.h2 {
+    text-decoration: underline;
+    margin-top: 4vmin;
+    font-size: 7vmin;
 }
